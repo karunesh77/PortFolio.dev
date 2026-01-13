@@ -9,12 +9,21 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.36.7",
+    "aos": "^2.3.4",
+    "lucide-react": "^0.562.0",
+    "mongoose": "^9.1.2",
     "next": "16.1.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-toastify": "^11.0.5",
+    "react-typed": "^2.0.12",
+    "toastify": "^2.0.1",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
