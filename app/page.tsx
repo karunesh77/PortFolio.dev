@@ -178,7 +178,7 @@ export default function Portfolio() {
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a
-              href="https://drive.google.com/file/d/1OTjvUslpTYtTRhlpOj9eTf76ZfhDFyNm/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1qdDBpQkWotWuOpwXSTXk86TTZS_BnvV3/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
             >
