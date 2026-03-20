@@ -27,7 +27,7 @@ export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const el = useRef(null);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function Portfolio() {
     })
 
     const type = new Typed(el.current, {
-      strings: ["Full Stack Developer", "Creative Problem Solver","Mern Stack Developer"],
+      strings: ["Full Stack Developer", "Creative Problem Solver", "Mern Stack Developer"],
       startDelay: 100,
       typeSpeed: 60,
       backSpeed: 30,
@@ -52,15 +52,22 @@ export default function Portfolio() {
     };
   }, []);
 
-  
+
 
   const projects = [
+    {
+      title: "vibes-music",
+      description:
+        "A full-stack music streaming platform with user authentication, music playback, and playlist management.",
+      tech: ["React", "vite", "Tailwind", "javascript"],
+      link: "https://github.com/karunesh77/VibesMusic",
+    },
 
     {
       title: "Authenticaton System",
       description:
         "A full-stack authentication system with user registration, login, and password verify functionality with next-auth.",
-      tech: ["React", "Next.js", "Tailwind", "MongoDB","TypeScript","Next-Auth"],
+      tech: ["React", "Next.js", "Tailwind", "MongoDB", "TypeScript", "Next-Auth"],
       link: "https://github.com/karunesh77/Next_Auth_Authorization",
     },
     {
@@ -70,20 +77,27 @@ export default function Portfolio() {
       tech: ["React", "Node.js", "MongoDB", "Tailwind"],
       link: "https://github.com/karunesh77/Ecommerce-app-MERN_stack",
     },
-    
+
     {
       title: "Portfolio",
       description:
-       "A  portfolio with clerk/next.js authentication system.",
-      tech: ["React", "D3.js", "Firebase", "Tailwind","Clerk"],
+        "A  portfolio with clerk/next.js authentication system.",
+      tech: ["React", "D3.js", "Firebase", "Tailwind", "Clerk"],
       link: "#",
     },
-     {
+    {
       title: "Short Url Service",
       description:
         "A full-stack short url service with user registration, login, and password verify functionality.",
       tech: ["React", "D3.js", "MONGODB", "Tailwind"],
       link: "https://github.com/karunesh77/Generate_Short_Url",
+    },
+    {
+      title: "ai-support-agent",
+      description:
+        "A full-stack ai-support-agent with user registration, login, and password verify functionality.",
+      tech: ["React", "Next.js", "Tailwind", "TypeScript", "claud"],
+      link: "https://github.com/karunesh77/ai-support-agent",
     },
   ];
 
@@ -97,13 +111,18 @@ export default function Portfolio() {
       items: ["Node.js", "Python", "PostgreSQL", "MongoDB"],
     },
     { category: "Tools", items: ["Git", "Docker", "Postman", "clerk"] },
+
+    {
+      category: "AI Tools",
+      items: ["ChatGPT", "OpenAI", "cursor", "claud", "notion"],
+    }
   ];
 
-  
-   
+
+
 
   return (
-    <div  className="min-h-screen bg-linear-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-linear-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Navigation */}
       <nav data-aos="fade-up" className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,16 +180,15 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 pt-18">
         <div
-        data-aos="fade-right"
-          className={`max-w-4xl md:pt-16 mx-auto text-center transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          data-aos="fade-right"
+          className={`max-w-4xl md:pt-16 mx-auto text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <h1 className="text-5xl ml-6 md:text-7xl font-bold mb-6 bg-linear-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
             Hi, I'm {isSignedIn ? user?.firstName : "Karunesh Gupta"}
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-           <span ref={el} className="font-bold"> Full Stack Developer </span> 
+            <span ref={el} className="font-bold"> Full Stack Developer </span>
           </p>
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
             I build exceptional digital experiences that combine beautiful
@@ -206,9 +224,9 @@ export default function Portfolio() {
         </div>
 
         <div
-        data-aos="fade-left"
-        className=" hidden ml-50 mr-20 md:block">
-          <img src={isSignedIn ? user?.imageUrl : "./5.jpeg"}  alt="hero"  className="w-100 h-100 rounded-full object-cover border-4 border-purple-400 shadow-2xl hover:shadow-purple-500/50" />
+          data-aos="fade-left"
+          className=" hidden ml-50 mr-20 md:block">
+          <img src={isSignedIn ? user?.imageUrl : "./5.jpeg"} alt="hero" className="w-100 h-100 rounded-full object-cover border-4 border-purple-400 shadow-2xl hover:shadow-purple-500/50" />
         </div>
       </section>
 
